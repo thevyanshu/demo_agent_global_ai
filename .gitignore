@@ -1,0 +1,24 @@
+
+# Virtual environment
+.venv/
+venv/
+
+# Environment variables
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# SQLite database
+data/*.sqlite
+data/*.db
+
+# DeepEval
+.deepeval/
+deepeval_results/
+
+# IDE
+.vscode/
+.idea/

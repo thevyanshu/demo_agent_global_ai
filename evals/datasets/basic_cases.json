@@ -1,0 +1,25 @@
+
+[
+  {
+    "id": "deterministic_001",
+    "type": "calculator",
+    "input": "Calculate 25 * 4.",
+    "expected_output": "100"
+  },
+  {
+    "id": "deterministic_002",
+    "type": "calculator",
+    "input": "Calculate 150 / 5 + 10.",
+    "expected_output": "40.0"
+  },
+  {
+    "id": "llm_001",
+    "type": "relevancy",
+    "input": "Explain what an AI agent is in one sentence."
+  },
+  {
+    "id": "llm_002",
+    "type": "relevancy",
+    "input": "What is the difference between RAG and fine-tuning?"
+  }
+]

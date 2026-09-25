@@ -1,0 +1,17 @@
+
+# Core
+langgraph
+langchain
+langchain-core
+langchain-groq
+langchain-community
+langgraph-checkpoint-sqlite
+python-dotenv
+pydantic-settings
+fastapi
+uvicorn
+pytest
+
+# Evaluation
+deepeval
+groq
