@@ -16,6 +16,8 @@ _ALLOWED_OPERATORS = {
     ast.USub: operator.neg,
 }
 
+_MAX_EXPONENT = 1000
+
 
 def _evaluate(node):
     if isinstance(node, ast.Constant) and isinstance(
@@ -38,10 +40,18 @@ def _evaluate(node):
         if op is None:
             raise ValueError("Unsupported binary operator")
 
-        return op(
-            _evaluate(node.left),
-            _evaluate(node.right),
-        )
+        left = _evaluate(node.left)
+        right = _evaluate(node.right)
+
+        # Guard against resource-exhaustion via extreme exponents.
+        if isinstance(node.op, ast.Pow) and (
+            abs(right) > _MAX_EXPONENT
+        ):
+            raise ValueError(
+                f"Exponent too large (max {_MAX_EXPONENT})"
+            )
+
+        return op(left, right)
 
     raise ValueError("Unsupported expression")
 
