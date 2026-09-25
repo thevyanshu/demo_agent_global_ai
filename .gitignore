@@ -22,3 +22,6 @@ deepeval_results/
 # IDE
 .vscode/
 .idea/
+
+.agents/
+AGENTS.md
